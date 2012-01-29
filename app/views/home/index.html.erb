@@ -1,47 +1,60 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>Lang World - Peer 2 Peer Language Center</title>
+	<title>Lang World - Peer 2 Peer Language Center</title>
 
-<link href="CSS/Style CSS.css" rel="stylesheet" type="text/css" />
-<link href="javascript/email.js" rel="stylesheet" type="text/javascript" />
-  
+	<link href="CSS/Style CSS.css" rel="stylesheet" type="text/css" />
+	<link href="javascript/email.js" rel="stylesheet" type="text/javascript" />
+
 </head>
 <body>
-  <div id="main">
-    Lang World <br />
-   <br />
-  </div>
+	<% if flash[:notice] %>
+		<div id="notice">
+			<p class="flash-notice"><%= flash[:notice] %><a id="close" href="#" onclick="hide('notice');">[x]</a></p>
+		</div>
+	<% end %>
+	
+	<div id="main">
+		Lang World <br />
+		<br />
+	</div>
 
-  <div id="what">
-   teach the language you speak, learn the language you want <br />
-  </div>
-  
-  <div id="face">
-   within Facebook <br />
-  
- </div>
- 
-  <!-- Begin VideoJS -->
-  <div id="yplayer" >
-      <iframe width="600" height="315" src="http://www.youtube.com/embed/3JSwIqgFc9Q" frameborder="0" allowfullscreen></iframe>
-      
-  </div>      
-   <div id="sign" >
-      <br/>
-      Enter your email address to know when we launch <br/>
-      
-      <!-- Email form -->
-      <%= form_tag({ :controller => :home, :action => :save_email }, :method=>'post') do %>
-      Email <input type="text" name="fname" />
-      <input type="submit" value="Submit" />
-      <% end %>
-      <!-- End Email form -->
-      
-   </div>
- 
+	<div id="what">
+		teach the language you speak, learn the language you want <br />
+	</div>
+
+	<div id="face">
+		within Facebook <br />
+
+	</div>
+
+	<!-- Begin VideoJS -->
+	<div id="yplayer" >
+		<iframe width="600" height="315" src="http://www.youtube.com/embed/3JSwIqgFc9Q" frameborder="0" allowfullscreen></iframe>
+
+	</div>      
+	<div id="sign" >
+		<br/>
+		Enter your email address to know when we launch <br/>
+
+		<!-- Email form -->
+		<%= form_tag({ :controller => :home, :action => :save_email }, :method=>'post') do %>
+		Email <input type="text" name="fname" />
+		<input type="submit" value="Submit" />
+		<% end %>
+		<!-- End Email form -->
+
+	</div>
+
+	<script type="text/javascript">
+	function hide(id) {
+		var e = document.getElementById(id);
+		e.style.display = 'none';
+	}
+	</script>
+
 </body>
 </html>
 
