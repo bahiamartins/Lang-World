@@ -50,9 +50,10 @@ Langworldweb::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  match 'save_email' => 'home#save_email', :via => :post
-  
   root :to => 'home#index'
+
+  match 'save_email' => 'home#save_email', :via => :post
+  match 'get_email' => 'home#get_email', :via => :get
 
   # See how all your routes lay out with "rake routes"
 
