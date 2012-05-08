@@ -2,19 +2,7 @@
 
 function validateForm()
 {
-var x=document.forms["myForm"]["fname"].value;
-if (x==null || x=="")
-  {
-  alert("First name must be filled out");
-  return false;
-  }
-}
-
-
-
-function validateForm()
-{
-var x=document.forms["myForm"]["email"].value;
+var x=document.forms["emailform"].value;
 var atpos=x.indexOf("@");
 var dotpos=x.lastIndexOf(".");
 if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
@@ -24,3 +12,7 @@ if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
   }
 }
 
+function submitForm()
+{
+  document.emailform.submit();
+}

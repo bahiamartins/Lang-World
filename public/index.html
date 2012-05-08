@@ -34,9 +34,11 @@
       Enter your email address to know when we launch <br />
       
       <!-- Email form -->
-      <form id="emailform" name="myForm" action="javascript/email.js" onsubmit="return validadeForm()" method="post">
-      Email <input type="text" name="fname" />
-      <input type="submit" value="Submit" />
+      <form id="emailform" action="javascript/email.js" onsubmit="return validadeForm()" method="post">      
+      Email <input type="text" name="email" />
+      <a href="javascript: submitForm()"> </a>
+      <input type="submit" value="Submit"/>
+      
       </form>
       <!-- End Email form -->
       
