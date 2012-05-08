@@ -4,19 +4,35 @@
 *{
 	margin: 0px;
 	padding: 0px;
-	font-family: Tahoma, Geneva, sans-serif;
-	
+	font-family: Tahoma, Geneva, sans-serif;	
 }
 
+h1 {
+	font-family: 'Dancing Script', Georgia, Times, serif;
+	font-weight:lighter;
+	font-size: 89px;
+	line-height: 60px;
+	color: #333;
+} 
+p {
+	font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;	
+	line-height: 25px;
+	margin-top: 15px;
+}
+span{
+	font-family: 'Dancing Script', Georgia, Times, serif;
+	color: #FC0;
+	line-height: 25px;
+	margin-top: 15px;
+}
 #main {
-	background-color: #d5e800;
-	font-size: 30px;
 	margin-top: 70px;
 	margin-left: 150px;
 	margin-right: 150px;
-	text-align: right;
+	text-align: center;
 	float:none;
 	height: 60px;
+	font-size: 28px;
 }
 
 #what {
@@ -51,10 +67,12 @@
 }
 
 #sign {
-	margin-top: 60px;
+	margin-top: 150px;
 	float: right;
 	padding: 30px;
 	padding-right: 190px;
+	font-size: 18px;
+	text-align: center;
 	
 }
 
@@ -68,8 +86,15 @@
 #yplayer {
 	float: left;
 	margin-left: 73px;
-	padding-left: 80px;
-	padding-top: 40px;
+	padding-left: 100px;
+	padding-top: 150px;
+}
+div#notice {
+	padding: 5px 0;
+	margin: 0 150px;
+	text-align: center;
+	color: #333;
+	background: #eceff0;
 }
 		
 		
